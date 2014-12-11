@@ -10,6 +10,7 @@ public enum EnumChatColor
 {
 	/**
 	 * This class helps you with color =D
+	 * Use this Example: EnumChatColor.BLACK + "Hello!"
 	 */
     BLACK('0'),
     DARK_BLUE('1'),
