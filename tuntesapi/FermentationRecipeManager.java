@@ -31,6 +31,31 @@ public class FermentationRecipeManager
     instance.recipes.add(new FermentationRecipe(energy, input, input2, (LiquidStack)ores.get(0)));
   }
   
+  public static boolean isLiquidResourceFor1(LiquidStack liquid)
+  {
+    for (int i = 0; i < instance.recipes.size(); i++)
+    {
+    	FermentationRecipe recipe = (FermentationRecipe)instance.recipes.get(i);
+      if (recipe.getInput().isLiquidEqual(liquid)) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  public static boolean isLiquidResourceFor2(LiquidStack liquid)
+  {
+    for (int i = 0; i < instance.recipes.size(); i++)
+    {
+    	FermentationRecipe recipe = (FermentationRecipe)instance.recipes.get(i);
+      if (recipe.getInput2().isLiquidEqual(liquid)) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  
   public static FermentationRecipe getRecipe(LiquidStack item)
   {
     if (item == null) {

@@ -15,7 +15,7 @@ public class FermentationRecipe
     this.input = input;
     this.input2 = input2;
     this.needEu = energy;
-    this.output = new LiquidStack(output.itemID, 1, output.itemMeta);
+    this.output = output;
   }
   
   public int getEuNeed()
@@ -26,12 +26,12 @@ public class FermentationRecipe
   
   public LiquidStack getInput()
   {
-    return this.input.copy();
+    return input.copy();
   }
   
   public LiquidStack getInput2()
   {
-    return this.input2.copy();
+    return input2.copy();
   }
   
   public LiquidStack getOutput()

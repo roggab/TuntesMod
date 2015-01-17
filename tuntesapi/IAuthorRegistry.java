@@ -7,4 +7,10 @@ public interface IAuthorRegistry
 	 * @return - Author NickName
 	 */
 	String getAuthor();
+	
+	/**
+	 * Sets the mod name
+	 * @return - Mod name
+	 */
+	String getModName();
 }
