@@ -11,5 +11,6 @@ public class Recipes
   public static IMachineRecipeManager metalformerRolling;
   public static IMachineRecipeManager matterAmplifier;
   public static IMachineRecipeManager Scanner;
+  public static IMachineRecipeManager blastfurance;
 }
 

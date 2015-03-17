@@ -43,4 +43,6 @@ public abstract interface IAdvReactor
   public abstract int getTickRate();
   
   public abstract boolean produceEnergy();
+
+  public abstract void setRedstoneSignal(boolean redstone);
 }

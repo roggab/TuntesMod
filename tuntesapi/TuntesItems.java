@@ -26,6 +26,27 @@ public final class TuntesItems {
 			return null;
 		}
 	}
+	
+	/**
+	 * @param name - name of item
+	 */
+	public static Item getItemFromGravi(String name) {
+		try {
+			if (mod_tuntesGravi == null) mod_tuntesGravi = Class.forName(getPackage() + ".mod_tuntesGravi");
+			
+			Object ret = mod_tuntesGravi.getField(name).get(null);
+			
+			if (ret instanceof Item) {
+				return (Item) ret;
+			} else {
+				return null;
+			}
+		} catch (Exception e) {
+			System.out.println("Tuntes API: Call getItemFromGravi failed for "+name);
+			
+			return null;
+		}
+	}
 	/**
 	 * @param name - name of Block
 	 */
@@ -55,5 +76,6 @@ public final class TuntesItems {
 	}
 	
 	private static Class mod_tuntescore;
+	private static Class mod_tuntesGravi;
 }
 
